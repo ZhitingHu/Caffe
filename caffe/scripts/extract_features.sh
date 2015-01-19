@@ -58,8 +58,8 @@ for ip in $unique_host_list; do
   echo Running client $client_id on $ip
   log_path=${log_dir}.${client_id}
 
-  cmd="rm -rf ${output_dir}; mkdir -p ${output_dir}; \
-    rm -rf ${log_path}; mkdir -p ${log_path}; \
+  cmd="mkdir -p ${output_dir}; \
+    mkdir -p ${log_path}; \
     GLOG_logtostderr=false \
     GLOG_stderrthreshold=0 \
     GLOG_log_dir=$log_path \
